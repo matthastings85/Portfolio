@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 
+import StyledFadeInSection from "./styled/FadeInSection.styled";
+
 const FadeInSection = (props) => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef();
@@ -12,12 +14,12 @@ const FadeInSection = (props) => {
     return () => observer.unobserve(current);
   }, []);
   return (
-    <div
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+    <StyledFadeInSection
+      visibility={`${isVisible ? "is-visible" : ""}`}
       ref={domRef}
     >
       {props.children}
-    </div>
+    </StyledFadeInSection>
   );
 };
 

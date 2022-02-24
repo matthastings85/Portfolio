@@ -1,22 +1,24 @@
 import React from "react";
+import { StyledHeader, Nav } from "./styled/Header.styled";
 import Button from "./Button";
+import { Flex } from "./styled/Flex.styled";
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <div className="header-nav-wrapper">
-      <div className="header"></div>
-      <nav className="nav-bar">
-        <div className="nav-left">
-          <div className="logo">M</div>
-        </div>
-        <div className="nav-right">
-          <Button text="Projects" className="nav-btn btn-fx3" />
-          <Button text="About Me" className="nav-btn btn-fx3" />
-          <Button text="Resume" className="nav-btn btn-fx3" />
-          <Button text="Contact" className="nav-btn btn-fx3" />
-        </div>
-      </nav>
-    </div>
+    <StyledHeader>
+      <Nav>
+        <Flex>
+          <span>M</span>
+        </Flex>
+        <Flex>
+          <Button type="nav" text="Projects" />
+          <Button type="nav" text="About Me" />
+          <Button type="nav" text="Resume" />
+          <Button type="nav" text="Contact" />
+          <Button type="nav" text="Dark/Light" callback={props.callback} />
+        </Flex>
+      </Nav>
+    </StyledHeader>
   );
 };
 

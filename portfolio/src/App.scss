@@ -1,11 +1,11 @@
 // Color Scheme
 // $bgPrimary: #373b3b;
-$bgPrimary: #012340;
+$bgPrimary: #a7a7a7fa;
 $normal: #027333;
 $muted: #025939;
 $accent: #03a63c;
-$bold: #04d939;
-$white: #f0f0f0;
+$bold: #04d939a1;
+$white: rgb(240, 240, 240);
 
 // $bgPrimary: #1a2526;
 // $normal: #818b8c;
@@ -21,19 +21,23 @@ $white: #f0f0f0;
 // $accent2: #72f2eb;
 // $accent: #00ccbf;
 // $white: #f0f0f0;
+$ddd: rgb(167, 167, 167);
 
-// Fonts
-$fontAccent: "Audiowide", cursive;
-$fontNormal: "Roboto", sans-serif;
+// Box-Shadow variable
+$box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
-// Global styles
-body {
-  box-sizing: border-box;
-  background-color: $bgPrimary;
-  color: $white;
-  font-family: $fontNormal;
-  font-size: 1.1rem;
-}
+// // Fonts
+// $fontAccent: "Audiowide", cursive;
+// $fontNormal: "Roboto", sans-serif;
+
+// // Global styles
+// body {
+//   box-sizing: border-box;
+//   background-color: $bgPrimary;
+//   color: $white;
+//   font-family: $fontNormal;
+//   font-size: 1.1rem;
+// }
 // Font
 .font-accent {
   font-family: $fontAccent;
@@ -67,7 +71,7 @@ body {
   font-size: 1.5rem;
   border-radius: 5px;
   padding: 15px;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: $box-shadow;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -252,9 +256,8 @@ body {
   .nav-bar {
     display: flex;
     justify-content: space-between;
-    background-color: $bgPrimary;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: rgba($bgPrimary, 0.9);
+    box-shadow: $box-shadow;
   }
   .nav-left {
     display: flex;
@@ -350,18 +353,20 @@ body {
   }
 
   .projects-card {
-    background-color: $normal;
-    height: 400px;
-    width: 350px;
-    border-radius: 20px;
+    min-width: 350px;
+    max-width: 450px;
     transition: all ease-in-out 0.5s;
+    box-shadow: $box-shadow;
+    border-radius: 20px;
+    overflow: hidden;
 
     &:hover {
       transform: scale(1.1);
     }
   }
-  .card-1 {
-    height: 500px;
+
+  img {
+    width: 100%;
   }
 }
 

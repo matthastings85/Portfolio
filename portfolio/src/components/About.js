@@ -2,17 +2,17 @@ import React from "react";
 
 // Components
 import FadeInSection from "./FadeInSection";
-
-// images
-import matt from "../images/matt.png";
+import SectionHeading from "./SectionHeading";
+import { StyledAbout } from "./styled/About.styled";
+import { Flex } from "./styled/Flex.styled";
 
 const About = () => {
   return (
     <FadeInSection>
-      <div className="about-wrapper">
-        <div className="content">
-          <div className="about-content">
-            <h1 className="section-heading">About Me</h1>
+      <StyledAbout>
+        <Flex jcSpaceBetween>
+          <div>
+            <SectionHeading>About Me</SectionHeading>
             <p>
               Hi, my name is Matt. After spending over ten years learning dead
               languages (languages no one speaks), I decided to learn some{" "}
@@ -47,9 +47,9 @@ const About = () => {
               their goals.
             </p>
           </div>
-          <img src={matt} alt="Matt profile pic"></img>
-        </div>
-      </div>
+          <img src="./images/matt.png" alt="Matt profile pic"></img>
+        </Flex>
+      </StyledAbout>
     </FadeInSection>
   );
 };

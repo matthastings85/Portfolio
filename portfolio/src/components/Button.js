@@ -1,10 +1,20 @@
 import React from "react";
 
-const Button = ({ text, callback, id, className }) => {
-  return (
-    <button className={className} onClick={callback} id={id}>
+import { MainBtn, NavBtn, AltBtn } from "./styled/Button.styled";
+
+const Button = ({ text, callback, id, type }) => {
+  return type === "nav" ? (
+    <NavBtn onClick={callback} id={id}>
       {text}
-    </button>
+    </NavBtn>
+  ) : type === "alt" ? (
+    <AltBtn onClick={callback} id={id}>
+      {text}
+    </AltBtn>
+  ) : (
+    <MainBtn onClick={callback} id={id}>
+      {text}
+    </MainBtn>
   );
 };
 
