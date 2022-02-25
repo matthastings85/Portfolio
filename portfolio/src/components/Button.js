@@ -11,6 +11,10 @@ const Button = ({ text, callback, id, type }) => {
     <AltBtn onClick={callback} id={id}>
       {text}
     </AltBtn>
+  ) : type === "submit" ? (
+    <MainBtn type={type} id={id}>
+      {text}
+    </MainBtn>
   ) : (
     <MainBtn onClick={callback} id={id}>
       {text}

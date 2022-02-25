@@ -14,11 +14,11 @@ const Projects = () => {
   return (
     <>
       <FadeInSection>
-        <StyledProjects>
+        <StyledProjects id="projects">
           <Flex layout="column">
             <SectionHeading>Projects</SectionHeading>
             <SubHeading>Featured Projects</SubHeading>
-            <Flex layout="column">
+            <Flex layout="column" width="100%">
               {projectsContent.map((item, index) => (
                 <Card key={index} item={item} />
               ))}

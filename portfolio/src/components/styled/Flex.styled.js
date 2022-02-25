@@ -24,4 +24,5 @@ export const Flex = styled.div`
       ? "space-around"
       : "center"};
   margin: 10px;
+  width: ${(props) => props.width || "auto"};
 `;

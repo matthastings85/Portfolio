@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledHeader = styled.div`
   width: 100%;
   position: fixed;
-  top: 0px;
+  top: ${({ hide }) => hide};
   z-index: 11;
   transition: all 0.5s ease;
 `;
@@ -26,5 +26,33 @@ export const Nav = styled.div`
     margin: 5px 30px;
     border: 2px solid ${({ theme }) => theme.colors.accent};
     border-radius: 25%;
+  }
+`;
+
+export const NavMenu = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: ${({ theme }) => theme.screen.xl}) {
+    position: fixed;
+    top: 85px;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: ${({ theme }) => theme.colors.dark};
+    transform: ${({ menu }) => (menu ? "translateX(0%)" : "translateX(100%)")};
+    transition: transform 1s ease;
+    box-shadow: ${({ theme }) => theme.shadow.one};
+
+    > * {
+      margin: 20px 0;
+    }
+  }
+  @media screen and (max-width: ${({ theme }) => theme.screen.small}) {
+    width: 100%;
   }
 `;

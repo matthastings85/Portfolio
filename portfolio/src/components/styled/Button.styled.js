@@ -15,13 +15,19 @@ const StyledButton = styled.button`
   &:active {
     transform: translateY(3px);
   }
+  @media screen and (max-width: ${({ theme }) => theme.screen.small}) {
+    width: 150px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 10px;
+  }
 `;
 
 export const MainBtn = styled(StyledButton)`
   background-color: ${({ theme }) => theme.colors.accent70};
   color: ${({ theme }) => theme.colors.light};
-  margin-right: 10px;
   transition: all 0.2s linear 0s;
+  margin: 10px;
 
   &:before {
     content: "\f054";
@@ -57,7 +63,7 @@ export const AltBtn = styled(StyledButton)`
   background-color: transparent;
   border: 2px solid ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.accent};
-  margin-left: 10px;
+  margin: 10px;
 
   &:hover {
     color: ${({ theme }) => theme.colors.dark};

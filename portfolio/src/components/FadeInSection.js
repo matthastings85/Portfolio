@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 
 import StyledFadeInSection from "./styled/FadeInSection.styled";
 
-const FadeInSection = (props) => {
+const FadeInSection = ({ children }) => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef();
   useEffect(() => {
@@ -15,10 +15,10 @@ const FadeInSection = (props) => {
   }, []);
   return (
     <StyledFadeInSection
-      visibility={`${isVisible ? "is-visible" : ""}`}
+      visibility={isVisible ? "is-visible" : ""}
       ref={domRef}
     >
-      {props.children}
+      {children}
     </StyledFadeInSection>
   );
 };

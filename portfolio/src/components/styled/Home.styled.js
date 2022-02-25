@@ -20,4 +20,31 @@ export const StyledHome = styled.div`
   h3 {
     margin-bottom: 50px;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.screen.xl}) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.screen.large}) {
+    flex-direction: column;
+    justify-content: center;
+    > div:nth-of-type(1) {
+      margin: 100px 0;
+    }
+  }
+  @media screen and (max-width: ${({ theme }) => theme.screen.small}) {
+    height: auto;
+    text-align: center;
+    > div:nth-of-type(1) {
+      margin: 20vh 0 50px;
+    }
+  }
 `;
