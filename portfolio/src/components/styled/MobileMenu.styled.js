@@ -7,30 +7,25 @@ const StyledMobileMenu = styled.div`
 
   > * {
     height: 3px;
-    width: ${({ hide }) => (hide ? "30px" : "35px")};
-    margin: ${({ hide }) => (hide ? "0.2rem 0" : "0.5rem 0")};
+    width: ${({ hide, menu }) => (hide && !menu ? "30px" : "35px")};
+    margin: ${({ hide, menu }) => (hide && !menu ? "0.2rem 0" : "0.5rem 0")};
     background-color: ${({ theme }) => theme.colors.secondary};
     transition: transform 0.75s ease, opacity 0.75s ease, width 0.75s ease;
     border-radius: 2px;
     &:nth-of-type(1) {
       transform: ${({ menu, hide }) =>
-        menu && !hide && "translate(-10px) rotate(45deg) translate(15.5px)"};
-      transform: ${({ menu, hide }) =>
-        menu && hide && "translate(-10px) rotate(45deg) translate(9px)"};
-      width: ${({ menu, hide }) => menu && hide && "25px"};
+        menu && "translate(-10px) rotate(45deg) translate(15.5px)"};
+      width: ${({ menu, hide }) => hide && !menu && "30px"};
     }
     &:nth-of-type(2) {
       width: ${({ hide }) => (hide ? "25px" : "30px")};
       opacity: ${(props) => props.menu && "0"};
     }
     &:nth-of-type(3) {
-      width: ${({ hide }) => (hide ? "20px" : "25px")};
+      width: ${({ hide, menu }) => (hide && !menu ? "20px" : "25px")};
       transform: ${({ menu, hide }) =>
-        menu && !hide && "translate(-10px) rotate(-45deg) translate(15.5px)"};
-      transform: ${({ menu, hide }) =>
-        menu && hide && "translate(-10px) rotate(-45deg) translate(9px)"};
-      width: ${({ menu, hide }) => menu && !hide && "35px"};
-      width: ${({ menu, hide }) => menu && hide && "25px"};
+        menu && "translate(-10px) rotate(-45deg) translate(15.5px)"};
+      width: ${({ menu, hide }) => menu && "35px"};
     }
   }
 

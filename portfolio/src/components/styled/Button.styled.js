@@ -18,6 +18,12 @@ const StyledButton = styled.button`
   &:active {
     transform: translateY(3px);
   }
+  @media screen and (max-width: ${({ theme }) => theme.screen.xl}) {
+    width: 200px;
+    height: 50px;
+    font-size: 1.25rem;
+    padding: 12.5px;
+  }
   @media screen and (max-width: ${({ theme }) => theme.screen.small}) {
     width: 150px;
     height: 40px;
@@ -115,8 +121,9 @@ export const NavBtn = styled.button`
   position: relative;
   background: transparent;
   border: none;
-  padding: ${({ hide }) => (hide ? "0.4rem 1.5rem" : "0.7rem 2.5rem")};
-  font-size: ${({ hide }) => (hide ? "1rem" : "1.2rem")};
+  padding: ${({ hide, menu }) =>
+    hide && !menu ? "0.4rem 1.5rem" : "0.7rem 2.5rem"};
+  font-size: ${({ hide, menu }) => (hide && !menu ? "1rem" : "1.2rem")};
   color: ${({ theme }) => theme.colors.secondary};
   transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
   cursor: pointer;

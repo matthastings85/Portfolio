@@ -23,6 +23,11 @@ export const StyledHome = styled.div`
   a {
     text-decoration: none;
   }
+
+  #home-buttons {
+    display: flex;
+    justify-content: flex-start;
+  }
   @media screen and (max-width: ${({ theme }) => theme.screen.xl}) {
     h1 {
       font-size: 2.5rem;
@@ -47,6 +52,9 @@ export const StyledHome = styled.div`
     text-align: center;
     > div:nth-of-type(1) {
       margin: 20vh 0 50px;
+    }
+    #home-buttons {
+      justify-content: center;
     }
   }
 `;

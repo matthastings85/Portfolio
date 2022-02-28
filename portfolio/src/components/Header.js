@@ -19,17 +19,18 @@ const Header = ({ setDarkMode, darkMode, goingUp }) => {
 
   const route = () => {};
   return (
-    <StyledHeader hide={hide}>
+    <StyledHeader>
       <Nav hide={hide}>
         <Flex>
           <a href="#home">
             <span>M</span>
           </a>
         </Flex>
-        <NavMenu menu={menuOpen}>
+        <NavMenu menu={menuOpen} onClick={closeMenu}>
           <a href="#projects">
             <Button
               hide={hide}
+              menu={menuOpen}
               type="nav"
               text="Projects"
               callback={closeMenu}
@@ -38,17 +39,25 @@ const Header = ({ setDarkMode, darkMode, goingUp }) => {
           <a href="#about">
             <Button
               hide={hide}
+              menu={menuOpen}
               type="nav"
               text="About Me"
               callback={closeMenu}
             />
           </a>
           <a href="#resume">
-            <Button hide={hide} type="nav" text="Resume" callback={closeMenu} />
+            <Button
+              hide={hide}
+              menu={menuOpen}
+              type="nav"
+              text="Resume"
+              callback={closeMenu}
+            />
           </a>
           <a href="#contact">
             <Button
               hide={hide}
+              menu={menuOpen}
               type="nav"
               text="Contact"
               callback={closeMenu}
@@ -56,6 +65,7 @@ const Header = ({ setDarkMode, darkMode, goingUp }) => {
           </a>
           <DarkModeToggle
             hide={hide}
+            menu={menuOpen}
             callback={setDarkMode}
             darkMode={darkMode}
           />

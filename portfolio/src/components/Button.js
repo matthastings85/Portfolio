@@ -2,9 +2,9 @@ import React from "react";
 
 import { MainBtn, NavBtn, AltBtn } from "./styled/Button.styled";
 
-const Button = ({ text, callback, id, type, hide }) => {
+const Button = ({ text, callback, id, type, hide, menu }) => {
   return type === "nav" ? (
-    <NavBtn hide={hide} onClick={callback} id={id}>
+    <NavBtn hide={hide} onClick={callback} id={id} menu={menu}>
       {text}
     </NavBtn>
   ) : type === "alt" ? (
