@@ -25,6 +25,13 @@ const StyledContactFrom = styled.form`
   textarea {
     min-height: 100px;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.screen.small}) {
+    input,
+    textarea {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export default StyledContactFrom;

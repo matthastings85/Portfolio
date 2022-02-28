@@ -20,7 +20,9 @@ export const StyledHome = styled.div`
   h3 {
     margin-bottom: 50px;
   }
-
+  a {
+    text-decoration: none;
+  }
   @media screen and (max-width: ${({ theme }) => theme.screen.xl}) {
     h1 {
       font-size: 2.5rem;

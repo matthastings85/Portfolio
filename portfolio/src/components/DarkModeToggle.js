@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import StyledDarkModeToggle from "./styled/DarkModeToggle.styled";
 
-const DarkModeToggle = ({ callback, darkMode }) => {
+const DarkModeToggle = ({ callback, darkMode, hide }) => {
   return (
-    <StyledDarkModeToggle onClick={callback} darkMode={darkMode}>
+    <StyledDarkModeToggle hide={hide} onClick={callback} darkMode={darkMode}>
       <div></div>
       <FontAwesomeIcon icon={faSun} />
       <FontAwesomeIcon icon={faMoon} />

@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
-  /* min-width: 350px; */
   width: 1000px;
   height: 400px;
   margin: 50px 0;
   transition: all ease-in-out 0.5s;
-  /* box-shadow: ${({ theme }) => theme.shadow.one};
-  border-radius: 20px; */
-  /* overflow: hidden; */
   display: flex;
   justify-content: space-between;
   align-items: space-between;
@@ -34,8 +30,8 @@ export const StyledCard = styled.div`
     position: absolute;
     top: 0;
     ${({ position }) => position}: 0;
-    /* background-color: ${({ theme }) => theme.colors.dark}fa; */
     z-index: 1;
+
     h2 {
       font-family: ${({ theme }) => theme.font.accent};
       color: ${({ theme }) => theme.colors.accent};
@@ -43,7 +39,6 @@ export const StyledCard = styled.div`
       background-color: ${({ theme }) => theme.colors.dark}fa;
       padding: 10px;
       border-radius: 5px;
-      /* box-shadow: ${({ theme }) => theme.shadow.two}; */
     }
 
     p {
@@ -83,6 +78,9 @@ export const StyledCard = styled.div`
       top: 0;
       left: 0;
       background: ${({ theme }) => theme.colors.dark}a1;
+      button {
+        display: none;
+      }
     }
   }
   img {
@@ -101,7 +99,7 @@ export const StyledCard = styled.div`
     justify-content: center;
     height: auto;
     & > div {
-      visibility: hidden;
+      visibility: ${({ show }) => (show ? "visible" : "hidden")};
       position: absolute;
       left: auto;
       right: auto;
@@ -113,34 +111,62 @@ export const StyledCard = styled.div`
     section {
       height: auto;
       position: relative;
+
       div {
         left: auto;
         top: auto;
-        background: none;
+        background: ${({ theme }) => theme.colors.dark}a1;
+        background: ${({ show, theme }) => show && theme.colors.dark};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+          display: ${({ show }) => !show && "block"};
+        }
       }
     }
-
-    &:hover {
-      > div {
-        visibility: visible;
+    #close-cross {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      cursor: pointer;
+      span {
+        height: 3px;
+        width: 30px;
+        margin: 0.5rem;
+        background-color: ${({ theme }) => theme.colors.secondary};
+        border-radius: 2px;
+        &:nth-of-type(1) {
+          transform: translate(-10px) rotate(45deg) translate(13.5px);
+        }
+        &:nth-of-type(2) {
+          transform: translate(-10px) rotate(-45deg) translate(13.5px);
+        }
       }
+    }
+    &:hover {
       section {
         div {
-          background: ${({ theme }) => theme.colors.dark};
+          background: ${({ show, theme }) =>
+            !show ? "none" : theme.colors.dark};
         }
       }
     }
   }
   @media screen and (max-width: ${({ theme }) => theme.screen.small}) {
-    width: 95%;
+    width: 100%;
     height: auto;
     > div {
       h2,
       span {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        margin: 0 10px;
       }
       p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         width: 100%;
       }
       a {

@@ -6,7 +6,7 @@ import MobileMenu from "./MobileMenu";
 import DarkModeToggle from "./DarkModeToggle";
 
 const Header = ({ setDarkMode, darkMode, goingUp }) => {
-  const [hide, setHide] = useState(true);
+  const [hide, setHide] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -19,27 +19,48 @@ const Header = ({ setDarkMode, darkMode, goingUp }) => {
 
   const route = () => {};
   return (
-    <StyledHeader hide={hide ? "-100px" : "0px"}>
-      <Nav>
+    <StyledHeader hide={hide}>
+      <Nav hide={hide}>
         <Flex>
-          <span>M</span>
+          <a href="#home">
+            <span>M</span>
+          </a>
         </Flex>
         <NavMenu menu={menuOpen}>
           <a href="#projects">
-            <Button type="nav" text="Projects" callback={closeMenu} />
+            <Button
+              hide={hide}
+              type="nav"
+              text="Projects"
+              callback={closeMenu}
+            />
           </a>
           <a href="#about">
-            <Button type="nav" text="About Me" callback={closeMenu} />
+            <Button
+              hide={hide}
+              type="nav"
+              text="About Me"
+              callback={closeMenu}
+            />
           </a>
           <a href="#resume">
-            <Button type="nav" text="Resume" callback={closeMenu} />
+            <Button hide={hide} type="nav" text="Resume" callback={closeMenu} />
           </a>
           <a href="#contact">
-            <Button type="nav" text="Contact" callback={closeMenu} />
+            <Button
+              hide={hide}
+              type="nav"
+              text="Contact"
+              callback={closeMenu}
+            />
           </a>
-          <DarkModeToggle callback={setDarkMode} darkMode={darkMode} />
+          <DarkModeToggle
+            hide={hide}
+            callback={setDarkMode}
+            darkMode={darkMode}
+          />
         </NavMenu>
-        <MobileMenu menu={menuOpen} callback={setMenuOpen} />
+        <MobileMenu hide={hide} menu={menuOpen} callback={setMenuOpen} />
       </Nav>
     </StyledHeader>
   );

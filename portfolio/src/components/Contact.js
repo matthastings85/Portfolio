@@ -5,7 +5,7 @@ import StyledContact from "./styled/Contact.styled";
 
 const Contact = () => {
   return (
-    <StyledContact layout="column">
+    <StyledContact layout="column" id="contact">
       <SectionHeading>Contact</SectionHeading>
       <ContactForm />
     </StyledContact>

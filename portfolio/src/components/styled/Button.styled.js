@@ -10,6 +10,9 @@ const StyledButton = styled.button`
   box-shadow: ${({ theme }) => theme.shadow.one};
   cursor: pointer;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 
   &:active {
@@ -24,8 +27,8 @@ const StyledButton = styled.button`
 `;
 
 export const MainBtn = styled(StyledButton)`
-  background-color: ${({ theme }) => theme.colors.accent70};
-  color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.dark};
   transition: all 0.2s linear 0s;
   margin: 10px;
 
@@ -112,8 +115,8 @@ export const NavBtn = styled.button`
   position: relative;
   background: transparent;
   border: none;
-  padding: 0.7rem 2.5rem;
-  font-size: 1.2rem;
+  padding: ${({ hide }) => (hide ? "0.4rem 1.5rem" : "0.7rem 2.5rem")};
+  font-size: ${({ hide }) => (hide ? "1rem" : "1.2rem")};
   color: ${({ theme }) => theme.colors.secondary};
   transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
   cursor: pointer;

@@ -23,6 +23,6 @@ export const Flex = styled.div`
       : props.jcSpaceAround
       ? "space-around"
       : "center"};
-  margin: 10px;
+  /* margin: 10px; */
   width: ${(props) => props.width || "auto"};
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyledCard } from "./styled/Card.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -13,8 +13,11 @@ import {
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { Flex } from "./styled/Flex.styled";
 import FadeInSection from "./FadeInSection";
+import Button from "./Button";
 
 const Card = ({ item: { id, title, body, image, repo, deploy, tools } }) => {
+  const [showDetails, setShowDetails] = useState(false);
+
   const getTool = (tool, index) => {
     return tool === "React" ? (
       <span key={index}>
@@ -34,11 +37,18 @@ const Card = ({ item: { id, title, body, image, repo, deploy, tools } }) => {
       </span>
     ) : null;
   };
+
+  const showInfo = () => {
+    setShowDetails((prev) => !prev);
+    console.log(showDetails);
+  };
+
   return (
     <StyledCard
       layout={id % 2 === 0 && "row"}
       position={id % 2 === 0 ? "right" : "left"}
       align={id % 2 === 0 ? "flex-end" : "flex-start"}
+      show={showDetails}
     >
       <div id={"card" + id}>
         <h2>{title}</h2>
@@ -58,9 +68,15 @@ const Card = ({ item: { id, title, body, image, repo, deploy, tools } }) => {
         <Flex>{tools.map((tool, index) => getTool(tool, index))}</Flex>
       </div>
       <section>
-        <div></div>
+        <div>
+          <Button text="Project Info" callback={showInfo} />
+        </div>
         <img src={`./images/${image}`} alt="" />
       </section>
+      <div id="close-cross" onClick={showInfo}>
+        <span></span>
+        <span></span>
+      </div>
     </StyledCard>
   );
 };

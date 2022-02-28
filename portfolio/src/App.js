@@ -17,8 +17,8 @@ import { ThemeProvider } from "styled-components";
 import Contact from "./components/Contact";
 
 function App() {
-  const prevScrollY = useRef(0);
-  const [goingUp, setGoingUp] = useState(false);
+  const prevScrollY = useRef(10);
+  const [goingUp, setGoingUp] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
   const theme = darkMode ? themeDark : themeLight;
 
