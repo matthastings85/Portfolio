@@ -56,6 +56,7 @@ export const StyledCard = styled.div`
       color: ${({ theme }) => theme.colors.light};
       margin: 10px;
       font-size: 1.5rem;
+      z-index: 100;
     }
     a:hover {
       color: ${({ theme }) => theme.colors.accent};
@@ -104,6 +105,7 @@ export const StyledCard = styled.div`
       left: auto;
       right: auto;
       align-items: center;
+      z-index: 3;
       p {
         text-align: center;
       }
@@ -111,6 +113,7 @@ export const StyledCard = styled.div`
     section {
       height: auto;
       position: relative;
+      z-index: 1;
 
       div {
         left: auto;
@@ -127,11 +130,13 @@ export const StyledCard = styled.div`
     }
     #close-cross {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      top: 0;
+      right: 0;
+      height: auto;
       display: flex;
       justify-content: flex-start;
       align-items: flex-end;
+      z-index: 3;
       cursor: pointer;
       span {
         height: 3px;
@@ -171,6 +176,7 @@ export const StyledCard = styled.div`
       }
       a {
         font-size: 1.3rem;
+        z-index: 100;
       }
     }
     img {

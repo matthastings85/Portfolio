@@ -43,7 +43,6 @@ const Card = ({
 
   const showInfo = () => {
     setShowDetails((prev) => !prev);
-    console.log(showDetails);
   };
 
   return (
@@ -78,9 +77,9 @@ const Card = ({
         </div>
         <img src={`./images/${image}`} alt="" />
       </section>
-      <div id="close-cross" onClick={showInfo}>
-        <span></span>
-        <span></span>
+      <div id="close-cross">
+        <span onClick={showInfo}></span>
+        <span onClick={showInfo}></span>
       </div>
     </StyledCard>
   );

@@ -4,23 +4,20 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import { StyledAbout } from "./styled/About.styled";
 import aboutContent from "../aboutContent";
-import FadeIn from "react-fade-in/lib/FadeIn";
 
 const About = () => {
   return (
-    <FadeIn>
-      <StyledAbout id="about">
-        <SectionHeading>About Me</SectionHeading>
+    <StyledAbout id="about">
+      <SectionHeading>About Me</SectionHeading>
+      <div>
         <div>
-          <div>
-            {aboutContent.map((p, index) => (
-              <p key={index}>{p}</p>
-            ))}
-          </div>
-          <img src="./images/matt.png" alt="Matt profile pic"></img>
+          {aboutContent.map((p, index) => (
+            <p key={index}>{p}</p>
+          ))}
         </div>
-      </StyledAbout>
-    </FadeIn>
+        <img src="./images/matt.png" alt="Matt profile pic"></img>
+      </div>
+    </StyledAbout>
   );
 };
 
