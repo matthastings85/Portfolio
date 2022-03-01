@@ -7,6 +7,7 @@ const Contact = () => {
   return (
     <StyledContact layout="column" id="contact">
       <SectionHeading>Contact</SectionHeading>
+
       <ContactForm />
     </StyledContact>
   );

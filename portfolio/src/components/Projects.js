@@ -13,20 +13,18 @@ import SubHeading from "./SubHeading";
 const Projects = () => {
   return (
     <>
-      <FadeInSection>
-        <StyledProjects id="projects">
-          <Flex layout="column">
-            <SectionHeading>Projects</SectionHeading>
-            <SubHeading>Featured Projects</SubHeading>
-            <Flex layout="column" width="100%">
-              {projectsContent.map((item, index) => (
-                <Card key={index} item={item} />
-              ))}
-            </Flex>
+      <StyledProjects id="projects">
+        <Flex layout="column">
+          <SectionHeading>Projects</SectionHeading>
+          <SubHeading>Featured Projects</SubHeading>
+          <Flex layout="column" width="100%">
+            {projectsContent.map((item, index) => (
+              <Card key={index} item={item} />
+            ))}
           </Flex>
-          <SubHeading>Other Noteworthy Projects</SubHeading>
-        </StyledProjects>
-      </FadeInSection>
+        </Flex>
+        <SubHeading>Other Noteworthy Projects</SubHeading>
+      </StyledProjects>
     </>
   );
 };

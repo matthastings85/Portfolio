@@ -9,13 +9,16 @@ import {
   faSass,
   faJs,
   faBootstrap,
+  faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { Flex } from "./styled/Flex.styled";
 import FadeInSection from "./FadeInSection";
 import Button from "./Button";
 
-const Card = ({ item: { id, title, body, image, repo, deploy, tools } }) => {
+const Card = ({
+  item: { id, title, body, image, repo, repoType, deploy, tools },
+}) => {
   const [showDetails, setShowDetails] = useState(false);
 
   const getTool = (tool, index) => {
@@ -54,13 +57,15 @@ const Card = ({ item: { id, title, body, image, repo, deploy, tools } }) => {
         <h2>{title}</h2>
         <Flex>
           <span>
-            <a href={deploy}>
+            <a href={deploy} target="_blank">
               <FontAwesomeIcon icon={faExternalLink} />
             </a>
           </span>
           <span>
-            <a href={repo}>
-              <FontAwesomeIcon icon={faGithub} />
+            <a href={repo} target="_blank">
+              <FontAwesomeIcon
+                icon={repoType === "github" ? faGithub : faCodepen}
+              />
             </a>
           </span>
         </Flex>

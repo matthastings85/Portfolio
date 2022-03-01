@@ -1,15 +1,14 @@
 import React from "react";
 
 // Components
-import FadeInSection from "./FadeInSection";
 import SectionHeading from "./SectionHeading";
 import { StyledAbout } from "./styled/About.styled";
-import { Flex } from "./styled/Flex.styled";
 import aboutContent from "../aboutContent";
+import FadeIn from "react-fade-in/lib/FadeIn";
 
 const About = () => {
   return (
-    <FadeInSection>
+    <FadeIn>
       <StyledAbout id="about">
         <SectionHeading>About Me</SectionHeading>
         <div>
@@ -21,7 +20,7 @@ const About = () => {
           <img src="./images/matt.png" alt="Matt profile pic"></img>
         </div>
       </StyledAbout>
-    </FadeInSection>
+    </FadeIn>
   );
 };
 

@@ -5,6 +5,7 @@ export const StyledHome = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* position: relative; */
 
   h1 {
     font-size: 3.5rem;
@@ -27,6 +28,7 @@ export const StyledHome = styled.div`
   #home-buttons {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 100px;
   }
   @media screen and (max-width: ${({ theme }) => theme.screen.xl}) {
     h1 {

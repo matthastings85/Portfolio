@@ -17,7 +17,6 @@ const Header = ({ setDarkMode, darkMode, goingUp }) => {
     setMenuOpen(false);
   };
 
-  const route = () => {};
   return (
     <StyledHeader>
       <Nav hide={hide}>
