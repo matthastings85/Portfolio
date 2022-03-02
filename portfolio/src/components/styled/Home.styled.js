@@ -29,6 +29,16 @@ export const StyledHome = styled.div`
     display: flex;
     justify-content: flex-start;
     margin-bottom: 100px;
+    margin: 25px 0;
+  }
+
+  #tool-icons {
+    font-size: 1.5rem;
+  }
+  @media screen and (min-width: ${({ theme }) => theme.screen.small}) {
+    #tool-icons {
+      font-size: 2rem;
+    }
   }
   @media screen and (max-width: ${({ theme }) => theme.screen.xl}) {
     h1 {

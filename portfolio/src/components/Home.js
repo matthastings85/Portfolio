@@ -6,6 +6,10 @@ import { StyledHome } from "./styled/Home.styled";
 import ComplimentGenerator from "./reusable/ComplimentGenerator";
 import Welcome from "./reusable/Welcome";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { Flex } from "./styled/Flex.styled";
+
+// Functions
+import { getToolIcon } from "../utilities/utilityFunctions";
 
 // Utilities
 import { homeDelay, transition } from "../utilities/loader";
@@ -18,6 +22,18 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, []);
 
+  const tools = [
+    "React",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "SASS",
+    "Bootstrap",
+    "GitHub",
+    "Codepen",
+    "Git",
+  ];
+
   const zero = (
     <CSSTransition classNames="fadeup" timeout={transition}>
       <Welcome />
@@ -25,7 +41,11 @@ const Home = () => {
   );
   const one = <h2>Matt Hastings</h2>;
   const two = <h1>Front-end Developer</h1>;
-  const three = <h3>React, JavaScript, HTML, CSS, SASS, and more.</h3>;
+  const three = (
+    <Flex jcSpaceBetween id="tool-icons">
+      {tools.map((tool, index) => getToolIcon(tool, index))}
+    </Flex>
+  );
   const four = (
     <div id="home-buttons">
       <a href="#projects">
@@ -38,6 +58,7 @@ const Home = () => {
   );
 
   const items = [zero, one, two, three, four];
+
   return (
     <StyledHome id="home">
       <TransitionGroup component={null}>

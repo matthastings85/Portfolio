@@ -1,44 +1,20 @@
 import React, { useState } from "react";
 import { StyledCard } from "../styled/Card.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-// Icons
-import {
-  faGithub,
-  faReact,
-  faSass,
-  faJs,
-  faBootstrap,
-  faCodepen,
-} from "@fortawesome/free-brands-svg-icons";
-import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { Flex } from "../styled/Flex.styled";
 import Button from "./Button";
+
+// Hooks
+import { getToolIcon } from "../../utilities/utilityFunctions";
+
+// Icons
+import { faGithub, faCodepen } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 
 const Card = ({
   item: { id, title, body, image, repo, repoType, deploy, tools },
 }) => {
   const [showDetails, setShowDetails] = useState(false);
-
-  const getTool = (tool, index) => {
-    return tool === "React" ? (
-      <span key={index}>
-        <FontAwesomeIcon icon={faReact} />
-      </span>
-    ) : tool === "SASS" ? (
-      <span key={index}>
-        <FontAwesomeIcon icon={faSass} />
-      </span>
-    ) : tool === "JavaScript" ? (
-      <span key={index}>
-        <FontAwesomeIcon icon={faJs} />
-      </span>
-    ) : tool === "Bootstrap" ? (
-      <span key={index}>
-        <FontAwesomeIcon icon={faBootstrap} />
-      </span>
-    ) : null;
-  };
 
   const showInfo = () => {
     setShowDetails((prev) => !prev);
@@ -68,7 +44,7 @@ const Card = ({
           </span>
         </Flex>
         <p>{body}</p>
-        <Flex>{tools.map((tool, index) => getTool(tool, index))}</Flex>
+        <Flex>{tools.map((tool, index) => getToolIcon(tool, index))}</Flex>
       </div>
       <section>
         <div>

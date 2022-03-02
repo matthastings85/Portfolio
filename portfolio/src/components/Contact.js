@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <StyledContact layout="column" id="contact">
       <SectionHeading>Contact</SectionHeading>
-      <p>I would love to hear from you!</p>
+      <h3>I hope you've enjoyed my site. I would love to hear from you!</h3>
       <ContactForm />
     </StyledContact>
   );
