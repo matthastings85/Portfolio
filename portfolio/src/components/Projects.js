@@ -22,7 +22,7 @@ const Projects = () => {
             ))}
           </Flex>
         </Flex>
-        <SubHeading>Other Noteworthy Projects</SubHeading>
+        {/* <SubHeading>Other Noteworthy Projects</SubHeading> */}
       </StyledProjects>
     </>
   );
