@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SectionHeading from "./reusable/SectionHeading";
 import Card from "./reusable/Card";
 import { Flex } from "./styled/Flex.styled";
-import { Grid } from "./styled/Grid.styled";
 import { StyledProjects } from "./styled/Projects.styled";
 
 // Content

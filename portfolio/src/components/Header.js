@@ -51,7 +51,10 @@ const Header = ({ setDarkMode, darkMode, goingUp }) => {
     </a>
   );
   const three = (
-    <a href="#resume">
+    <a
+      href="https://matthastings85.github.io/hosted-assets/MattHastingsResume_mar2022.pdf"
+      target="blank"
+    >
       <Button
         hide={hide}
         menu={menuOpen}

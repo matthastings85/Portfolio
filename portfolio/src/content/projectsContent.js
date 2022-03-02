@@ -22,7 +22,7 @@ const projectsContent = [
   {
     id: 3,
     title: "25 & 5 Timer",
-    body: "This is a simple app to implement the classic pomodoro productivity technique. I used React and JavaScript along with SASS.",
+    body: "This is a simple app to implement the classic pomodoro productivity technique. I used React and JavaScript, along with SASS.",
     image: "timer.png",
     repo: "https://codepen.io/matthastings85/pen/yLPavye?editors=0110",
     repoType: "codepen",

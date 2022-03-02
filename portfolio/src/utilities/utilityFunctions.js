@@ -9,7 +9,7 @@ import {
   faCodepen,
   faHtml5,
   faCss3,
-  faGit,
+  faGitAlt,
 } from "@fortawesome/free-brands-svg-icons";
 
 export const getToolIcon = (tool, index) => {
@@ -47,7 +47,7 @@ export const getToolIcon = (tool, index) => {
     </span>
   ) : tool === "Git" ? (
     <span key={index}>
-      <FontAwesomeIcon icon={faGit} />
+      <FontAwesomeIcon icon={faGitAlt} />
     </span>
   ) : null;
 };
