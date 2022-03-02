@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import StyledContactFrom from "./styled/ContactForm.styled";
+import StyledContactFrom from "../styled/ContactForm.styled";
 
 const FORM_ENDPOINT =
   "https://public.herotofu.com/v1/e91b5340-968d-11ec-bdf8-dd9c99f898ec";

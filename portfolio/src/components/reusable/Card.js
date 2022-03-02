@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyledCard } from "./styled/Card.styled";
+import { StyledCard } from "../styled/Card.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Icons
@@ -12,8 +12,7 @@ import {
   faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
-import { Flex } from "./styled/Flex.styled";
-import FadeInSection from "./FadeInSection";
+import { Flex } from "../styled/Flex.styled";
 import Button from "./Button";
 
 const Card = ({

@@ -1,7 +1,7 @@
 import React from "react";
 
 // Styles
-import { StyledSubHeading } from "./styled/SubHeading.styled";
+import { StyledSubHeading } from "../styled/SubHeading.styled";
 
 const SubHeading = ({ children }) => {
   return <StyledSubHeading>{children}</StyledSubHeading>;

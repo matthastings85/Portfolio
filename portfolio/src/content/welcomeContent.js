@@ -7,7 +7,7 @@ const welcomeContent = [
   "Your eyes are tired.",
   "Words are starting to blur together on the screen.",
   "You've seen the same projects over and over.",
-  "and you're wondering if this site will be any different.",
+  "You're wondering if this site will be any different.",
   "Well, let me say first...",
   "I'm tired for you.",
   "But, I have good news.",

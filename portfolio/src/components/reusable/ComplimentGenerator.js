@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import Button from "./Button";
-import compliments from "../compliments";
-import StyledComplimentGenerator from "./styled/ComplimentGenerator.styled";
+import compliments from "../../content/compliments";
+import StyledComplimentGenerator from "../styled/ComplimentGenerator.styled";
 
 const ComplimentGenerator = () => {
   const [opacity, setOpacity] = useState(1);

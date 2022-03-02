@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import FadeInSection from "./FadeInSection";
-import SectionHeading from "./SectionHeading";
-import Card from "./Card";
+import SectionHeading from "./reusable/SectionHeading";
+import Card from "./reusable/Card";
 import { Flex } from "./styled/Flex.styled";
 import { Grid } from "./styled/Grid.styled";
 import { StyledProjects } from "./styled/Projects.styled";
 
 // Content
-import projectsContent from "../projectsContent";
-import SubHeading from "./SubHeading";
+import projectsContent from "../content/projectsContent";
+import SubHeading from "./reusable/SubHeading";
 
 const Projects = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import StyledMobileMenu from "./styled/MobileMenu.styled";
+import StyledMobileMenu from "../styled/MobileMenu.styled";
 
 const MobileMenu = ({ menu, callback, hide }) => {
   const toggleMenu = () => {

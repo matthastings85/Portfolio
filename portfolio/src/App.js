@@ -7,14 +7,14 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import { Container } from "./components/styled/Container.styled";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 //Styles
-import { themeDark, themeLight } from "./theme";
-import GlobalStyles from "./GlobalStyles";
+import { themeDark, themeLight } from "./utilities/theme";
+import GlobalStyles from "./utilities/GlobalStyles";
 
 // Utilities
 import { ThemeProvider } from "styled-components";
-import Contact from "./components/Contact";
 
 function App() {
   const prevScrollY = useRef(10);

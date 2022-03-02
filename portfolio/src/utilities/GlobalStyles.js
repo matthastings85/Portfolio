@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import TransitionStyles from "../components/styled/Transitions.styled";
 
 const GlobalStyles = createGlobalStyle`
   
@@ -16,6 +17,8 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
   }
+
+  ${TransitionStyles}
 `;
 
 export default GlobalStyles;

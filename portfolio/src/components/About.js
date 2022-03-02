@@ -1,9 +1,9 @@
 import React from "react";
 
 // Components
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "./reusable/SectionHeading";
 import { StyledAbout } from "./styled/About.styled";
-import aboutContent from "../aboutContent";
+import aboutContent from "../content/aboutContent";
 
 const About = () => {
   return (

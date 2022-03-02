@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MainBtn, NavBtn, AltBtn } from "./styled/Button.styled";
+import { MainBtn, NavBtn, AltBtn } from "../styled/Button.styled";
 
 const Button = ({ text, callback, id, type, hide, menu }) => {
   return type === "nav" ? (
