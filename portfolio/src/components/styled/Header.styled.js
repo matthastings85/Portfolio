@@ -59,7 +59,7 @@ export const NavMenu = styled.div`
     justify-content: flex-start;
     background: ${({ theme }) => theme.colors.dark};
     transform: ${({ menu }) => (menu ? "translateX(0%)" : "translateX(100%)")};
-    transition: transform 1s ease;
+    transition: transform 0.7s ease;
     box-shadow: ${({ theme }) => theme.shadow.one};
 
     > * {
