@@ -12,7 +12,7 @@ const StyledDarkModeToggle = styled.div`
   position: relative;
   margin: 0 20px;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 
   div {
     margin: 0;
@@ -22,7 +22,7 @@ const StyledDarkModeToggle = styled.div`
     border-radius: 50%;
     background-color: ${({ theme }) => theme.colors.secondary};
     position: absolute;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     left: ${({ darkMode, hide, menu }) =>
       (darkMode && !hide) || (darkMode && menu)
         ? "40px"

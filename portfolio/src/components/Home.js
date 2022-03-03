@@ -35,7 +35,7 @@ const Home = () => {
   ];
 
   const zero = (
-    <CSSTransition classNames="fadeup" timeout={transition}>
+    <CSSTransition classNames="fadedown" timeout={transition}>
       <Welcome />
     </CSSTransition>
   );
@@ -66,14 +66,18 @@ const Home = () => {
           <TransitionGroup component={null}>
             {isMounted &&
               items.map((item, i) => (
-                <CSSTransition key={i} classNames="fadeup" timeout={transition}>
+                <CSSTransition
+                  key={i}
+                  classNames="fadedown"
+                  timeout={transition}
+                >
                   <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
                 </CSSTransition>
               ))}
           </TransitionGroup>
         </div>
         {isMounted && (
-          <CSSTransition classNames="fadeup" timeout={transition}>
+          <CSSTransition classNames="fadedown" timeout={transition}>
             <div style={{ transitionDelay: `${items.length + 1}00ms` }}>
               <ComplimentGenerator />
             </div>

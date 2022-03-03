@@ -2,6 +2,8 @@ import { css } from "styled-components";
 
 // https://reactcommunity.org/react-transition-group/css-transition
 
+// These are the CSS transitions for loading using React Transition Groups
+
 const TransitionStyles = css`
   /* Fade up */
   .fadeup-enter {
@@ -24,21 +26,6 @@ const TransitionStyles = css`
     opacity: 1;
     transform: translateY(0px);
     transition: opacity 400ms ease-in, transform 400ms ease-in;
-  }
-  /* Fade */
-  .fade-enter {
-    opacity: 0;
-  }
-  .fade-enter-active {
-    opacity: 1;
-    transition: opacity 400ms ease-in;
-  }
-  .fade-exit {
-    opacity: 1;
-  }
-  .fade-exit-active {
-    opacity: 0;
-    transition: opacity 400ms ease-in;
   }
 `;
 

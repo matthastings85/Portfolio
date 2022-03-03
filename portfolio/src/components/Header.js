@@ -14,6 +14,7 @@ const Header = ({ setDarkMode, darkMode, goingUp }) => {
   const [hide, setHide] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [finished, setFinished] = useState(false);
 
   useEffect(() => {
     setHide(() => (goingUp ? false : true));
@@ -25,6 +26,11 @@ const Header = ({ setDarkMode, darkMode, goingUp }) => {
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setFinished(true), 3000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -108,9 +114,13 @@ const Header = ({ setDarkMode, darkMode, goingUp }) => {
                     classNames="fadedown"
                     timeout={transition}
                   >
-                    <div style={{ transitionDelay: `${i + 2}00ms` }}>
-                      {item}
-                    </div>
+                    {!finished ? (
+                      <div style={{ transitionDelay: `${i + 1}00ms ` }}>
+                        {item}
+                      </div>
+                    ) : (
+                      <div>{item}</div>
+                    )}
                   </CSSTransition>
                 ))}
             </TransitionGroup>
