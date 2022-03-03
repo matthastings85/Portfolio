@@ -4,12 +4,12 @@ export const homeDelay = 1000;
 
 export const welcomeDelay = 3000;
 
-export const aboutDelay = 2000;
+export const aboutDelay = 1500;
 
-export const projectsDelay = 2100;
+export const projectsDelay = 1600;
 
-export const contactDelay = 2200;
+export const contactDelay = 1700;
 
-export const footerDelay = 2300;
+export const footerDelay = 1800;
 
 export const transition = 100;
