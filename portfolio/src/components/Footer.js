@@ -23,18 +23,31 @@ const Footer = () => {
       {isMounted && (
         <StyledFooter>
           <Flex>
-            <a href="https://twitter.com/matthastings" target="_blank">
+            <a
+              href="https://twitter.com/matthastings"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="https://github.com/matthastings85" target="_blank">
+            <a
+              href="https://github.com/matthastings85"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href="https://codepen.io/matthastings85" target="_blank">
+            <a
+              href="https://codepen.io/matthastings85"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faCodepen} />
             </a>
             <a
               href="https://www.linkedin.com/in/matt-hastings-646b16221/"
               target="_blank"
+              rel="noreferrer"
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>

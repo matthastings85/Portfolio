@@ -13,11 +13,6 @@ export const StyledCard = styled.div`
 
   &:hover {
     transform: scale(1.01);
-    section {
-      div {
-        background: none;
-      }
-    }
   }
 
   > div {
@@ -90,6 +85,15 @@ export const StyledCard = styled.div`
     box-shadow: ${({ theme }) => theme.shadow.two};
   }
 
+  @media screen and (min-width: ${({ theme }) => theme.screen.large}) {
+    &:hover {
+      section {
+        div {
+          z-index: -1;
+        }
+      }
+    }
+  }
   @media screen and (max-width: ${({ theme }) => theme.screen.xl}) {
     width: 900px;
   }

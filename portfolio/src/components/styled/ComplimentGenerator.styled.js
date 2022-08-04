@@ -48,7 +48,7 @@ const StyledComplimentGenerator = styled.div`
     }
   }
   @media screen and (max-width: ${({ theme }) => theme.screen.small}) {
-    width: 95%;
+    width: 100%;
   }
 `;
 

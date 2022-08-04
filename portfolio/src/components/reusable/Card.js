@@ -31,12 +31,12 @@ const Card = ({
         <h2>{title}</h2>
         <Flex>
           <span>
-            <a href={deploy} target="_blank">
+            <a href={deploy} target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faExternalLink} />
             </a>
           </span>
           <span>
-            <a href={repo} target="_blank">
+            <a href={repo} target="_blank" rel="noreferrer">
               <FontAwesomeIcon
                 icon={repoType === "github" ? faGithub : faCodepen}
               />
@@ -50,7 +50,9 @@ const Card = ({
         <div>
           <Button text="Project Info" callback={showInfo} />
         </div>
-        <img src={`./images/${image}`} alt="" />
+        <a href={deploy} target="_blank" rel="noreferrer">
+          <img src={`./images/${image}`} alt={title} />
+        </a>
       </section>
       <div id="close-cross">
         <span onClick={showInfo}></span>

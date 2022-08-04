@@ -28,6 +28,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       method="POST"
       target="_blank"
+      rel="noreferrer"
     >
       <input type="text" placeholder="Your name" name="name" required />
       <input type="email" placeholder="Email" name="email" required />

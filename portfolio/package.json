@@ -1,5 +1,13 @@
 {
   "name": "portfolio",
+  "author": "Matt Hastings",
+  "description": "Portfolio site built by Matt Hastings to showcase his software development projects.",
+  "keywords": [
+    "portfolio",
+    "software development",
+    "React",
+    "JavaScript"
+  ],
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +30,7 @@
     "react-scripts": "5.0.0",
     "react-transition-group": "^4.4.2",
     "styled-components": "^5.3.3",
+    "swiper": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -12,7 +12,7 @@ export const StyledHeader = styled.div`
 `;
 
 export const Nav = styled.div`
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
