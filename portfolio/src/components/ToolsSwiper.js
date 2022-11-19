@@ -19,6 +19,11 @@ const ToolsSwiper = () => {
     "GitHub",
     "Codepen",
     "Git",
+    "Node",
+    "NPM",
+    "Shopify",
+    "Wordpress",
+    "MUI",
   ];
 
   return (
