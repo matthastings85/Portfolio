@@ -6,7 +6,7 @@ const projectsContent = [
     image: "meals-app.png",
     repo: "https://github.com/matthastings85/meals-app",
     repoType: "github",
-    deploy: "https://mealz-app.netlify.app/",
+    deploy: "https://the-meals-app.vercel.app/",
     tools: ["React", "JavaScript", "MUI", "NPM", "Node"],
   },
   {
