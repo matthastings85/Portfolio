@@ -26,7 +26,7 @@ const Home = () => {
     </CSSTransition>
   );
   const one = <h2>Matt Hastings</h2>;
-  const two = <h1>Front-end Developer</h1>;
+  const two = <h1>Front-end Developer / DevOps Engineer</h1>;
   const three = <ToolsSwiper />;
   const four = (
     <div id="home-buttons">

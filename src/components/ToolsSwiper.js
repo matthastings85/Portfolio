@@ -12,6 +12,9 @@ const ToolsSwiper = () => {
   const tools = [
     "React",
     "JavaScript",
+    "Docker",
+    "Jenkins",
+    "Linux",
     "HTML",
     "CSS",
     "SASS",

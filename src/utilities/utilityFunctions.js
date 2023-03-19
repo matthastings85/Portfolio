@@ -15,6 +15,8 @@ import {
   faDocker,
   faShopify,
   faNpm,
+  faLinux,
+  faJenkins,
 } from "@fortawesome/free-brands-svg-icons";
 
 export const getToolIcon = (tool, index) => {
@@ -69,6 +71,18 @@ export const getToolIcon = (tool, index) => {
   ) : tool === "NPM" ? (
     <span key={index}>
       <FontAwesomeIcon icon={faNpm} />
+    </span>
+  ) : tool === "Docker" ? (
+    <span key={index}>
+      <FontAwesomeIcon icon={faDocker} />
+    </span>
+  ) : tool === "Jenkins" ? (
+    <span key={index}>
+      <FontAwesomeIcon icon={faJenkins} />
+    </span>
+  ) : tool === "Linux" ? (
+    <span key={index}>
+      <FontAwesomeIcon icon={faLinux} />
     </span>
   ) : tool === "MUI" ? (
     <span key={index}>
