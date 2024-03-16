@@ -1,14 +1,14 @@
 const projectsContent = [
-  {
-    id: 1,
-    title: "Meals App",
-    body: "This project arose out of the desire to make it easier from our family to plan our meals and stay in budget. With two working parents and three growing children, we end up spending way more on our food budget than we would like, and our budget could withstand. This app allows you to plan meals and create shopping lists from those plans. It's integrated with a highly rated recipe API and also allows you to add custom recipes of your own. Feel free to test it out and enjoy!",
-    image: "meals-app.png",
-    repo: "https://github.com/matthastings85/meals-app",
-    repoType: "github",
-    deploy: "https://the-meals-app.vercel.app/",
-    tools: ["React", "JavaScript", "MUI", "NPM", "Node"],
-  },
+  // {
+  //   id: 1,
+  //   title: "Meals App",
+  //   body: "This project arose out of the desire to make it easier from our family to plan our meals and stay in budget. With two working parents and three growing children, we end up spending way more on our food budget than we would like, and our budget could withstand. This app allows you to plan meals and create shopping lists from those plans. It's integrated with a highly rated recipe API and also allows you to add custom recipes of your own. Feel free to test it out and enjoy!",
+  //   image: "meals-app.png",
+  //   repo: "https://github.com/matthastings85/meals-app",
+  //   repoType: "github",
+  //   deploy: "https://the-meals-app.vercel.app/",
+  //   tools: ["React", "JavaScript", "MUI", "NPM", "Node"],
+  // },
   {
     id: 2,
     title: "Pokédex",
